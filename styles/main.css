@@ -1,0 +1,330 @@
+/* main.css — стили сайта GameZone */
+
+/* CSS переменные (цвета, отступы, размеры) */
+:root {
+  --bg: #0f1721; /* основной фон (тёмная тема) */
+  --card: #0b1220;
+  --accent: #ff4d6d; /* основной акцент */
+  --accent-2: #3be1b4; /* дополнительный акцент */
+  --muted: #9aa4b2;
+  --text: #e6eef6;
+  --glass: rgba(255, 255, 255, 0.03);
+  --max-width: 1200px;
+  --radius: 12px;
+  --gap: 1rem;
+  --transition: 200ms ease;
+  --min-font: 16px;
+  --font-heading: "Orbitron", sans-serif;
+  --font-body: "Poppins", sans-serif;
+}
+
+/* Global layout */
+body {
+  font-size: 16px; /* гарантируем читаемость */
+  padding-top: 72px; /* место для sticky header */
+  overflow-x: hidden; /* запрещаем горизонтальную прокрутку */
+  font-family: var(--font-body);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+/* Container helper */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(
+    180deg,
+    rgba(11, 18, 32, 0.85),
+    rgba(11, 18, 32, 0.7)
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.brand img {
+  width: 44px;
+  height: 44px;
+}
+.brand h1 {
+  font-size: 1.25rem;
+  letter-spacing: 0.6px;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+/* Nav */
+nav.main-nav {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+nav.main-nav a {
+  color: var(--muted);
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  transition: color var(--transition), background var(--transition),
+    transform var(--transition);
+  font-weight: 600;
+}
+nav.main-nav a:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.02);
+  transform: translateY(-2px);
+}
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+.hero-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 24px rgba(2, 6, 23, 0.6);
+}
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+}
+.hero p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* CTA */
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #051018;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: transform var(--transition), filter var(--transition);
+}
+.btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.03);
+}
+
+/* Catalog grid */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card {
+  background: linear-gradient(180deg, var(--card), rgba(10, 12, 20, 0.6));
+  border-radius: 12px;
+  padding: 0.9rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.6);
+}
+.card .thumb {
+  height: 130px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(0, 0, 0, 0.05)
+  );
+}
+.card-image{
+    width: 100%;
+    height: 180px; 
+    overflow: hidden;
+    border-radius: 12px;
+}
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+ 
+.card h3 {
+  margin-top: 0.6rem;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+.card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.35rem;
+}
+
+/* Card meta and button */
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+.card .price {
+  color: var(--accent-2);
+  font-weight: 700;
+}
+.card .small-btn {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(59, 225, 180, 0.12);
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer.site-footer {
+  background: linear-gradient(
+    180deg,
+    rgba(7, 10, 15, 0.6),
+    rgba(7, 10, 15, 0.9)
+  );
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  position: relative;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-inner p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Contact form */
+form.contact-form {
+  display: grid;
+  gap: 0.6rem;
+}
+.input,
+textarea {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 0.65rem;
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 1rem;
+}
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Small utility */
+.kv {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Responsive rules */
+
+/* <= 1024px: reduce grid to 2 columns in catalog */
+@media (max-width: 1024px) {
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* <= 768px: single-column catalog, larger text */
+@media (max-width: 768px) {
+  :root {
+    --min-font: 16px;
+  }
+  body {
+    font-size: 16px;
+    padding-top: 64px;
+  }
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+  nav.main-nav {
+    display: none;
+  } /* simple mobile: hide desktop nav (could add hamburger) */
+}
+
+/* <= 480px: compact hero and ensure no horizontal scroll */
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.25rem;
+  }
+  .brand h1 {
+    font-size: 1rem;
+  }
+  .header-inner {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  body {
+    padding-top: 60px;
+  }
+  .card .thumb {
+    height: 110px;
+  }
+}
+
+/* Accessibility: focus styles */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid rgba(59, 225, 180, 0.18);
+  outline-offset: 2px;
+}
+
+/* small animation for footer copyright */
+.site-footer p {
+  transition: opacity var(--transition);
+}

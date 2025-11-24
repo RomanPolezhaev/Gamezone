@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GameZone — Контакты</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <div class="brand">
+          <img
+            src="assets/images/logo.svg"
+            alt="GameZone logo"
+            width="44"
+            height="44"
+          />
+          <div>
+            <h1>GameZone</h1>
+            <div class="kv">Контакты</div>
+          </div>
+        </div>
+
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="contact.html">Контакты</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn" href="index.html">На главную</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" role="main" style="padding: 1.25rem 0">
+      <section
+        aria-labelledby="contact-title"
+        style="display: grid; grid-template-columns: 1fr 360px; gap: 1rem"
+      >
+        <div>
+          <h2
+            id="contact-title"
+            style="color: var(--text); margin-bottom: 0.6rem"
+          >
+            Свяжитесь с нами
+          </h2>
+          <p class="kv">
+            Есть вопрос или предложение? Отправьте сообщение — мы ответим в
+            течение рабочего дня.
+          </p>
+
+          <!-- Форма обратной связи: name, email/phone, message -->
+          <!-- Для демонстрации action использует mailto: — это открывает почтовый клиент.
+             В учебных целях можно подключить серверную обработку. -->
+          <form
+            class="contact-form"
+            action="mailto:example@gamezone.test"
+            method="post"
+            enctype="text/plain"
+          >
+            <label>
+              <span class="kv">Ваше имя</span>
+              <input
+                class="input"
+                type="text"
+                name="name"
+                required
+                placeholder="Иван Иванов"
+              />
+            </label>
+
+            <label>
+              <span class="kv">Email или телефон</span>
+              <input
+                class="input"
+                type="text"
+                name="contact"
+                required
+                placeholder="ivan@example.com или +7..."
+              />
+            </label>
+
+            <label>
+              <span class="kv">Сообщение</span>
+              <textarea
+                name="message"
+                required
+                placeholder="Опишите ваш вопрос"
+              ></textarea>
+            </label>
+
+            <div style="display: flex; gap: 0.6rem">
+              <button class="btn" type="submit">Отправить</button>
+              <button class="small-btn" type="reset">Очистить</button>
+            </div>
+          </form>
+        </div>
+
+        <aside
+          style="background: var(--glass); padding: 1rem; border-radius: 12px"
+        >
+          <h3 style="color: var(--text); margin-bottom: 0.4rem">
+            Контактная информация
+          </h3>
+          <p class="kv">
+            Email:
+            <a href="mailto:example@gamezone.test">example@gamezone.test</a>
+          </p>
+          <p class="kv">
+            Телефон: <a href="tel:+77123456789">+7 (712) 345-67-89</a>
+          </p>
+          <p class="kv">Адрес: Алматы, Казахстан</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div>
+          <p>&copy; <strong>GameZone</strong> — Контакты</p>
+        </div>
+        <div>
+          <p class="kv">Спасибо за интерес к проекту</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

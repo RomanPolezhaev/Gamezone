@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GameZone — Каталог</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <div class="brand">
+          <img
+            src="assets/images/logo.svg"
+            alt="GameZone logo"
+            width="44"
+            height="44"
+          />
+          <div>
+            <h1>GameZone</h1>
+            <div class="kv">Каталог</div>
+          </div>
+        </div>
+
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="contact.html">Контакты</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn" href="#filters">Фильтры</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" role="main">
+      <section aria-labelledby="catalog-title" style="padding: 1.25rem 0">
+        <h2
+          id="catalog-title"
+          style="color: var(--text); margin-bottom: 0.6rem"
+        >
+          Игры в каталоге
+        </h2>
+
+        <!-- (Optional) фильтры - простая панель -->
+        <div
+          id="filters"
+          style="
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+          "
+        >
+          <a class="small-btn" href="#all">Все</a>
+          <a class="small-btn" href="#action">Экшн</a>
+          <a class="small-btn" href="#strategy">Стратегии</a>
+          <a class="small-btn" href="#puzzle">Головоломки</a>
+        </div>
+
+        <div class="catalog-grid">
+          <!-- Развёрнуто: 8 карточек — аналогично index, но больше описаний -->
+          <!-- Card 1 -->
+          <article class="card" aria-labelledby="c1">
+            <div class="thumb">
+              <div class="card-image">
+                <img
+                  src="assets/images/cyberpunk2077.jpg"
+                  alt="cyberpunk2077 cover"
+                  width="300"
+                  height="160"
+                />
+              </div>
+            </div>
+            <h3 id="c1">Cyberpunk 2077</h3>
+            <p>
+              Скоростной киберпанк-шутер с яркой стилистикой и сюжетными
+              миссиями.
+            </p>
+            <div class="card-meta">
+              <div class="price">₸ 17990</div>
+              <a class="small-btn" href="contact.html">Купить</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" aria-labelledby="c2">
+            <div class="thumb">
+              <div class="card-image">
+                <img
+                  src="assets/images/falloutnewvegas.webp"
+                  alt="falloutnewvegas cover"
+                  width="300"
+                  height="160"
+                />
+              </div>
+            </div>
+            <h3 id="c2">Fallout New Vegas</h3>
+            <p>
+              Атмосферная приключенческая игра в сеттинге постъядерной Америки.
+            </p>
+            <div class="card-meta">
+              <div class="price">₸ 3360</div>
+              <a class="small-btn" href="contact.html">Купить</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" aria-labelledby="c3">
+            <div class="thumb">
+              <div class="card-image">
+                <img
+                  src="assets/images/rimworld.webp"
+                  alt="rimworld cover"
+                  width="300"
+                  height="160"
+                />
+              </div>
+            </div>
+            <h3 id="c3">Rimworld</h3>
+            <p>Стратегия по строительству и выживанию на далёкой планете.</p>
+            <div class="card-meta">
+              <div class="price">₸ 8800</div>
+              <a class="small-btn" href="contact.html">Купить</a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card" aria-labelledby="c4">
+            <div class="thumb">
+              <div class="card-image">
+                <img
+                  src="assets/images/eldenring.webp"
+                  alt="eldenring cover"
+                  width="300"
+                  height="160"
+                />
+              </div>
+            </div>
+            <h3 id="c4">Elden Ring</h3>
+            <p>
+              Соулс-лайк игра со сложной боевой системой и потрясающим фентэзи
+              сеттингом
+            </p>
+            <div class="card-meta">
+              <div class="price">₸ 17990</div>
+              <a class="small-btn" href="contact.html">Купить</a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="card" aria-labelledby="c5">
+            <div class="thumb">
+              <div class="card-image">
+                <img
+                  src="assets/images/darktide.webp"
+                  alt="Darktide cover"
+                  width="300"
+                  height="160"
+                />
+              </div>
+            </div>
+            <h3 id="c5">Warhammer 40000 Darktide</h3>
+            <p>
+              Кооперативный шутер на 4 игроков в мрачном сеттинге далёкого
+              будущего
+            </p>
+            <div class="card-meta">
+              <div class="price">₸ 12900</div>
+              <a class="small-btn" href="contact.html">Купить</a>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="card" aria-labelledby="c6">
+            <div class="thumb">
+              <div class="card-image">
+                <img
+                  src="assets/images/dota.webp"
+                  alt="Dota cover"
+                  width="300"
+                  height="160"
+                />
+              </div>
+            </div>
+            <h3 id="c6">Dota 2</h3>
+            <p>
+              Одна из самых популярных игр в жанре MOBA с более чем
+              полумиллионом активных игроков
+            </p>
+            <div class="card-meta">
+              <div class="price">Free</div>
+              <a class="small-btn" href="contact.html">Скачать</a>
+            </div>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="card" aria-labelledby="c7">
+            <div class="thumb">
+              <div class="card-image">
+                <img
+                  src="assets/images/hoi4banner.webp"
+                  alt="hoi4 cover"
+                  width="300"
+                  height="160"
+                />
+              </div>
+            </div>
+            <h3 id="c7">Hearts of Iron 4</h3>
+            <p>Глобальная стратегия в сеттинге второй мировой войны</p>
+            <div class="card-meta">
+              <div class="price">₸ 16500</div>
+              <a class="small-btn" href="contact.html">Купить</a>
+            </div>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="card" aria-labelledby="c8">
+            <div class="thumb">
+              <div class="card-image">
+                <img
+                  src="assets/images/projectzomboid.jpg"
+                  alt="projectzomboid cover"
+                  width="300"
+                  height="160"
+                />
+              </div>
+            </div>
+            <h3 id="c8">Project Zomboid</h3>
+            <p>Хардкорное выживание в сеттинге зомбиапокалипсиса.</p>
+            <div class="card-meta">
+              <div class="price">₸ 5200</div>
+              <a class="small-btn" href="contact.html">Купить</a>
+            </div>
+          </article>
+          <article class="card" aria-labelledby="c8">
+            <div class="thumb">
+              <div class="card-image">
+                <img
+                  src="assets/images/twd.jpg"
+                  alt="twd cover"
+                  width="300"
+                  height="160"
+                />
+              </div>
+            </div>
+            <h3 id="c9">The Walking Dead</h3>
+            <p>
+              Интерактивное кино по мотивам знаменитых комиксов Роберта Киркмана
+            </p>
+            <div class="card-meta">
+              <div class="price">₸ 4100</div>
+              <a class="small-btn" href="contact.html">Купить</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div>
+          <p>&copy; <strong>GameZone</strong> — Каталог</p>
+          <p class="kv">Версия проекта: учебная</p>
+        </div>
+        <div>
+          <p class="kv">
+            <a href="index.html">Главная</a> ·
+            <a href="contact.html">Контакты</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

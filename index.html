@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GameZone — Главная</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <div class="brand">
+          <img
+            src="assets/images/logo.svg"
+            alt="GameZone logo"
+            width="44"
+            height="44"
+          />
+          <div>
+            <h1>GameZone</h1>
+            <div class="kv">Твой портал игр и обзоров</div>
+          </div>
+        </div>
+
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="contact.html">Контакты</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn" href="catalog.html">Перейти в каталог</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" role="main">
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-card">
+          <h2 id="hero-title">
+            Добро пожаловать в
+            <span style="color: var(--accent)">GameZone</span>
+          </h2>
+          <p>
+            Новинки, рецензии, подборки и персональные рекомендации — всё в
+            одном месте. Просматривай игры, сохраняй в избранное и свяжись с
+            нами.
+          </p>
+          <p>
+            <a class="btn" href="catalog.html">Посмотреть каталог</a>
+          </p>
+        </div>
+
+        
+      </section>
+
+      <!-- Популярные карточки (превью каталога) -->
+      <section aria-labelledby="popular-title" style="margin-top: 1.25rem">
+        <h2
+          id="popular-title"
+          style="color: var(--text); margin-bottom: 0.6rem"
+        >
+          Популярные игры
+        </h2>
+
+        <div class="catalog-grid">
+          <!-- Карточки — используем одинаковую структуру, 6 карточек -->
+          <article class="card" aria-labelledby="g1">
+            <div class="thumb">
+              <div class="card-image">
+              <img
+                src="assets/images/cyberpunk2077.jpg"
+                alt="Обложка игры Cyberpunk 2077"
+              />
+              </div>
+            </div>
+            <h3 id="g1">Cyberpunk 2077</h3>
+            <p>
+              Скоростной киберпанк-шутер с яркой стилистикой и сюжетными
+              миссиями.
+            </p>
+            <div class="card-meta">
+              <div class="price">₸ 17990</div>
+              <a class="small-btn" href="catalog.html">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="g2">
+            <div class="thumb">
+              <div class="card-image">
+              <img
+                src="assets/images/falloutnewvegas.webp"
+                alt="Обложка игры Fallout New Vegas"
+                
+              />
+            </div>
+            </div>
+            <h3 id="g2">Fallout New Vegas</h3>
+            <p>
+              Атмосферная приключенческая игра в сеттинге постъядерной Америки.
+            </p>
+            <div class="card-meta">
+              <div class="price">₸ 3360</div>
+              <a class="small-btn" href="catalog.html">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="g3">
+            <div class="thumb">
+              <div class="card-image">
+              <img
+                src="assets/images/rimworld.webp"
+                alt="Обложка игры Rimworld"
+               
+              />
+              </div>
+            </div>
+            <h3 id="g3">Rimworld</h3>
+            <p>Стратегия по строительству и выживанию на далёкой планете.</p>
+            <div class="card-meta">
+              <div class="price">₸ 8800</div>
+              <a class="small-btn" href="catalog.html">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="g4">
+            <div class="thumb">
+              <div class="card-image">
+              <img
+                src="assets/images/eldenring.webp"
+                alt="Обложка игры Elden Ring"
+               
+              />
+              </div>
+            </div>
+            <h3 id="g4">Elden Ring</h3>
+            <p>
+             Соулс-лайк игра со сложной боевой системой и потрясающим фентэзи сеттингом
+            </p>
+            <div class="card-meta">
+              <div class="price">₸ 17990</div>
+              <a class="small-btn" href="catalog.html">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="g5">
+            <div class="thumb">
+              <div class="card-image">
+              <img
+                src="assets/images/darktide.webp"
+                alt="Обложка игры Darktide"
+               
+              />
+              </div>
+            </div>
+            <h3 id="g5">Warhammer 40000 Darktide</h3>
+            <p>Кооперативный шутер на 4 игроков в мрачном сеттинге далёкого будущего</p>
+            <div class="card-meta">
+              <div class="price">₸ 12900</div>
+              <a class="small-btn" href="catalog.html">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="g6">
+            <div class="thumb">
+              <div class="card-image">
+              <img
+                src="assets/images/dota.webp"
+                alt="Обложка игры Dota2"
+                
+              />
+            </div>
+            </div>
+            <h3 id="g6">Dota 2</h3>
+            <p>Одна из самых популярных игр в жанре MOBA с более чем полумиллионом активных игроков</p>
+            <div class="card-meta">
+              <div class="price">Free</div>
+              <a class="small-btn" href="catalog.html">Подробнее</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (виден на всех страницах) -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div>
+          <p>&copy; <strong>GameZone</strong> — 2025. Все права защищены.</p>
+          <p class="kv">Сайт учебного проекта — демонстрация HTML и CSS.</p>
+        </div>
+        <div>
+          <p class="kv">
+            Контакты: <a href="contact.html">Связаться с нами</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
